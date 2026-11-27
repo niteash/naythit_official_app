@@ -1,127 +1,1498 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#050505" />
-  <meta name="description" content="Nay Thit — a smarter way to stay informed. Personalized news, clear sources, and audio briefings. Coming soon to iOS and Android." />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Nay Thit — Your day. In the know." />
-  <meta property="og:description" content="The news that matters to you, made to fit your day. Coming soon." />
-  <title>Nay Thit — Coming Soon</title>
-  <style>
-    :root{--paper:#f4f3ef;--ink:#141414;--muted:#62625f;--red:#e5322c;--line:#d8d7d1;--surface:#eae9e4;--white:#fff;--dot:#d0cec7}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}button,a{-webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(1240px,calc(100% - 80px));margin:auto}.top{height:88px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:11px;font-weight:850;font-size:23px;letter-spacing:-1.4px}.brand-mark{width:24px;height:24px;background:var(--red);border-radius:50%;position:relative;box-shadow:0 0 0 4px rgba(229,50,44,.08)}.brand-mark:after{content:"";position:absolute;width:6px;height:6px;border-radius:50%;background:var(--paper);left:9px;top:9px}.word-dot{font-weight:300;letter-spacing:-1.5px}.top-right{display:flex;align-items:center;gap:35px;font-size:12px;font-weight:750;letter-spacing:.12em;text-transform:uppercase}.top-right a:hover{color:var(--red)}.top-pill{border:1px solid #222;padding:12px 17px;border-radius:40px}.top-pill:hover{background:var(--ink);color:var(--paper)!important}.hero{display:grid;grid-template-columns:1fr 1fr;min-height:710px;position:relative;border-bottom:1px solid var(--line)}.hero-copy{padding:112px 25px 80px 0;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:1}.eyebrow{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;font-weight:650;letter-spacing:.15em;text-transform:uppercase;display:flex;align-items:center;gap:10px}.blink{width:7px;height:7px;background:var(--red);border-radius:50%;box-shadow:0 0 0 5px rgba(229,50,44,.10);animation:blinker 2s infinite}@keyframes blinker{50%{opacity:.35}}h1{font-size:clamp(66px,7.4vw,114px);font-weight:760;line-height:.92;letter-spacing:-.095em;margin:33px 0 27px;max-width:680px}h1 .outline{color:transparent;-webkit-text-stroke:1.5px var(--ink)}h1 .red{color:var(--red)}.lead{color:#53534f;line-height:1.75;font-size:17px;max-width:440px;margin:0}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}.store{display:flex;align-items:center;gap:13px;border-radius:9px;border:1px solid #262626;background:#171717;color:#fff;padding:13px 19px;min-width:174px;min-height:66px;cursor:default}.store svg{width:27px;height:27px;flex:none}.store small{display:block;color:#b7b7b7;font-size:10px;letter-spacing:.03em;margin-bottom:3px}.store strong{display:block;font-size:15px;letter-spacing:-.02em}.store[aria-disabled="true"]{opacity:.83}.store:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--red);outline-offset:4px}.coming-note{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:var(--muted);margin-top:19px;display:flex;align-items:center;gap:8px}.coming-note:before{content:"↗";color:var(--red);font-size:16px}.hero-art{min-height:650px;position:relative;display:grid;place-items:center;overflow:hidden;background:radial-gradient(#d4d3cd 1px,transparent 1px);background-size:17px 17px;border-left:1px solid var(--line)}.hero-art:before{content:"";position:absolute;width:510px;height:510px;border:1px solid rgba(32,32,32,.17);border-radius:50%}.hero-art:after{content:"";position:absolute;width:690px;height:690px;border:1px dashed rgba(32,32,32,.13);border-radius:50%}.orbit-label{position:absolute;top:42px;right:42px;font:11px ui-monospace,Menlo,monospace;letter-spacing:.12em;color:#555;z-index:2}.orbit-label:before{content:"●";color:var(--red);padding-right:8px}.phone{width:292px;height:572px;border:8px solid #202020;border-radius:43px;background:#fbfaf7;box-shadow:15px 24px 0 #c8c7c0,23px 40px 50px rgba(0,0,0,.2);position:relative;z-index:2;transform:rotate(-7deg);padding:20px 18px;overflow:hidden}.phone:after{content:"";position:absolute;inset:2px;border:1px solid #4a4a4a;border-radius:32px;pointer-events:none}.island{position:absolute;top:9px;left:50%;transform:translateX(-50%);width:70px;height:19px;background:#202020;border-radius:20px}.phone-time{font-weight:800;font-size:10px;margin:1px 0 35px 7px}.phone-top{display:flex;align-items:center;justify-content:space-between}.mini-logo{font-size:18px;font-weight:850;letter-spacing:-1.2px}.mini-dot{color:var(--red)}.phone-avatar{width:27px;height:27px;border:1px solid #aaa;border-radius:50%;display:grid;place-items:center;font-size:10px}.phone-date{margin-top:29px;color:#898882;text-transform:uppercase;letter-spacing:.1em;font:9px ui-monospace,Menlo,monospace}.phone-title{font-size:32px;line-height:.98;font-weight:800;letter-spacing:-1.7px;margin:9px 0 20px}.phone-title span{color:var(--red)}.topic-row{display:flex;gap:5px;margin-bottom:22px}.topic{background:#eae9e4;border-radius:30px;padding:7px 9px;font-size:9px;font-weight:700}.topic.active{background:#1c1c1c;color:white}.news-box{background:#e9e8e2;padding:15px;border-radius:11px;position:relative}.news-label{font:9px ui-monospace,Menlo,monospace;color:#73736e;letter-spacing:.09em;text-transform:uppercase}.news-art{height:86px;border-radius:7px;margin:11px 0;background:linear-gradient(135deg,#171717 0 18%,#333 18% 28%,#c6c3b8 28% 38%,#6f7069 38% 57%,#222 57% 70%,#e5322c 70% 79%,#242424 79%);position:relative;overflow:hidden}.news-art:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent 11px,rgba(255,255,255,.08) 12px)}.news-heading{font-size:14px;line-height:1.25;font-weight:800;letter-spacing:-.4px}.news-detail{font-size:10px;line-height:1.5;color:#72726f;margin-top:7px}.audio{margin-top:16px;border:1px solid #cbc9c2;background:#fff;border-radius:10px;padding:12px;display:flex;align-items:center;gap:10px}.play{width:31px;height:31px;border:0;border-radius:50%;background:var(--red);color:white;display:grid;place-items:center;font-size:13px;flex:none;cursor:pointer}.audio-copy{flex:1;min-width:0}.audio-name{font-size:10px;font-weight:800}.audio-caption{font-size:9px;color:#777;margin-top:4px}.sound-bars{display:flex;align-items:center;gap:2px;height:21px}.sound-bars i{width:2px;background:var(--red);border-radius:3px;height:var(--h);opacity:.8}.sound-bars.playing i{animation:pulse .65s ease-in-out infinite alternate;animation-delay:var(--d)}@keyframes pulse{to{height:4px;opacity:.35}}.phone-nav{position:absolute;bottom:16px;left:26px;right:26px;border-top:1px solid #dcdad2;padding-top:14px;display:flex;justify-content:space-between;color:#878781;font-size:9px}.phone-nav strong{color:var(--red)}.stat-stamp{position:absolute;bottom:36px;left:38px;font:11px ui-monospace,Menlo,monospace;line-height:1.8;z-index:2;color:#656560}.stat-stamp b{color:var(--ink)}.float-tag{position:absolute;right:20px;bottom:83px;background:var(--paper);border:1px solid var(--ink);padding:12px 14px;z-index:3;font:12px ui-monospace,Menlo,monospace;transform:rotate(5deg);box-shadow:5px 5px 0 var(--red)}.marquee{border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:18px 0;font:11px ui-monospace,Menlo,monospace;color:#666;letter-spacing:.12em;text-align:center}.marquee .sep{color:var(--red);padding:0 28px}.section{padding:100px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:38px}.section-index{font:11px ui-monospace,Menlo,monospace;color:var(--red);letter-spacing:.14em;text-transform:uppercase}.section h2{font-weight:780;letter-spacing:-.07em;line-height:1.04;font-size:clamp(39px,5vw,69px);margin:13px 0 0}.section-intro{font-size:15px;line-height:1.7;color:var(--muted);max-width:340px}.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}.feature{padding:35px 27px 45px 0;min-height:260px}.feature+.feature{border-left:1px solid var(--line);padding-left:30px}.feature-no{font:12px ui-monospace,Menlo,monospace;color:var(--red)}.feature-icon{font-size:27px;margin:34px 0 20px;line-height:1}.feature h3{font-size:22px;letter-spacing:-.04em;margin:0 0 11px}.feature p{font-size:14px;line-height:1.7;color:var(--muted);max-width:280px;margin:0}.bottom{background:#191919;color:#f4f3ef;padding:82px 0 28px;position:relative;overflow:hidden}.bottom:before{content:"";position:absolute;inset:0;background:radial-gradient(#515151 1px,transparent 1px);background-size:20px 20px;opacity:.18;pointer-events:none}.bottom-inner{position:relative}.bottom-label{font:12px ui-monospace,Menlo,monospace;letter-spacing:.15em;color:#aaa}.bottom h2{font-size:clamp(60px,9vw,138px);line-height:.95;letter-spacing:-.09em;margin:22px 0 28px}.bottom h2 span{color:var(--red)}.bottom p{max-width:510px;color:#b8b8b4;line-height:1.7}.footer{display:flex;justify-content:space-between;gap:30px;align-items:center;margin-top:105px;border-top:1px solid #484848;padding-top:25px;color:#a5a5a1;font:11px ui-monospace,Menlo,monospace}.footer strong{font-size:19px;color:var(--paper);letter-spacing:-1px;font-family:Inter,Arial,sans-serif}.footer .right{display:flex;gap:24px;flex-wrap:wrap}.footer a:hover{color:white}.bottom .store{border-color:#666;background:#f4f3ef;color:#111}.bottom .store small{color:#666}.bottom .actions{margin-top:25px}.visually-hidden{position:absolute;clip:rect(0 0 0 0);width:1px;height:1px;overflow:hidden;white-space:nowrap}
-    @media(max-width:980px){.wrap{width:min(100% - 48px,850px)}.hero{grid-template-columns:1fr 1fr}.hero-copy{padding-top:75px;padding-bottom:75px}h1{font-size:clamp(58px,7vw,85px)}.hero-art{min-height:640px}.phone{transform:rotate(-5deg) scale(.88)}.float-tag{right:1px}.stat-stamp{left:12px}.orbit-label{right:15px}.section{padding:75px 0}}
-    @media(max-width:720px){.wrap{width:calc(100% - 36px)}.top{height:74px}.brand{font-size:21px}.top-right{gap:15px}.top-right>a:first-child{display:none}.top-pill{padding:10px 12px;font-size:10px}.hero{grid-template-columns:1fr}.hero-copy{padding:74px 0 65px}.hero h1{font-size:clamp(68px,13vw,104px);margin-top:25px}.lead{font-size:15px}.hero-art{border-left:0;border-top:1px solid var(--line);height:620px;min-height:0}.phone{transform:rotate(-6deg) scale(.9)}.orbit-label{top:24px;right:10px}.float-tag{right:8px;bottom:72px}.stat-stamp{bottom:27px}.section-head{display:block}.section-intro{margin-top:18px}.feature-grid{grid-template-columns:1fr}.feature{min-height:0;padding:28px 0 30px!important}.feature+.feature{border-left:0;border-top:1px solid var(--line)}.feature-icon{margin:20px 0 13px}.footer{margin-top:65px;flex-direction:column;align-items:flex-start}.bottom{padding-top:70px}.bottom h2{font-size:clamp(62px,13vw,108px)}}
-    @media(max-width:380px){.hero h1{font-size:61px}.store{min-width:154px;padding:10px 12px}.phone{transform:rotate(-6deg) scale(.81)}.hero-art{height:560px}.float-tag{font-size:10px;right:2px}}
-    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important}}
-
-    /* Nay Thit / monochrome edition — solid sharp black, no dots or red */
-    :root{--paper:#050505;--ink:#f2f2f2;--muted:#939393;--red:#f2f2f2;--line:#292929;--surface:#121212;--white:#fff;--dot:transparent}
-    body{background:#050505;color:#f2f2f2}
-    ::selection{background:#f2f2f2;color:#050505}
-    .top{border-bottom-color:#252525}
-    .brand-mark{display:grid;place-items:center;width:28px;height:28px;border:1px solid #d5d5d5;background:transparent;color:white;border-radius:0;box-shadow:none;font-size:15px;font-weight:750;letter-spacing:-.1em}
-    .brand-mark:after{display:none}
-    .word-mark{font-weight:300}
-    .top-right a:hover{color:white;opacity:.75}
-    .top-pill{border-color:#535353;border-radius:3px}
-    .top-pill:hover{background:#f2f2f2;color:#050505!important}
-    .eyebrow{color:#bcbcbc}.blink{background:#dedede;border-radius:0;box-shadow:none}
-    h1 .outline{-webkit-text-stroke:1.3px #777}
-    h1 .accent{color:#fff}
-    .lead{color:#a4a4a4}
-    .store{border:1px solid #4a4a4a;background:#f5f5f5;color:#080808;border-radius:3px}
-    .store small{color:#555}.store[aria-disabled="true"]{opacity:1}
-    .store:focus-visible,a:focus-visible,button:focus-visible{outline-color:#fff}
-    .coming-note:before{color:#e3e3e3}
-    .hero-art{background:#0b0b0b;border-left-color:#262626}
-    .hero-art:before,.hero-art:after{display:none}
-    .orbit-label{color:#858585}.orbit-label:before{content:"/";color:#ddd}
-    .phone{transform:rotate(-4deg);border-radius:33px;box-shadow:16px 22px 0 #252525,28px 42px 65px rgba(0,0,0,.5)}
-    .phone:after{border-radius:26px}.mini-dot,.phone-title span{color:#242424}
-    .news-art{background:linear-gradient(135deg,#111 0 18%,#303030 18% 28%,#aaa 28% 38%,#606060 38% 57%,#222 57% 70%,#c5c5c5 70% 79%,#242424 79%)}
-    .play{background:#242424}.sound-bars i{background:#333}.phone-nav strong{color:#252525}
-    .stat-stamp{color:#a7a7a7}.stat-stamp b{color:white}
-    .float-tag{background:#eaeaea;border-color:#eaeaea;color:#121212;box-shadow:6px 6px 0 #505050}
-    .marquee{color:#a4a4a4;border-bottom-color:#292929}.marquee .sep{color:#e0e0e0}
-    .section-index,.feature-no{color:#c0c0c0}
-    .feature-grid{border-top-color:#575757;border-bottom-color:#575757}
-    .bottom{background:#0e0e0e}
-    .bottom:before{display:none}
-    .bottom h2 span{color:#a4a4a4}
-    .bottom .store{background:#f2f2f2;color:#050505;border-color:#f2f2f2}
-    .bottom .store small{color:#555}
-    .footer{border-top-color:#363636}.footer strong{color:#f2f2f2}
-    @media(max-width:980px){.phone{transform:rotate(-3deg) scale(.88)}}
-    @media(max-width:720px){.hero-art{border-top-color:#292929}.phone{transform:rotate(-3deg) scale(.9)}}
-    @media(max-width:380px){.phone{transform:rotate(-3deg) scale(.81)}}
-  </style>
-</head>
-<body>
-  <header class="wrap top">
-    <a class="brand" href="#top" aria-label="Nay Thit home"><span class="brand-mark" aria-hidden="true">N</span><span>naythit<span class="word-mark">.</span></span></a>
-    <nav class="top-right" aria-label="Main navigation"><a href="#features">The experience</a><a class="top-pill" href="#download">Get the app ↗</a></nav>
-  </header>
-  <main id="top">
-    <section class="wrap hero" aria-labelledby="headline">
-      <div class="hero-copy">
-        <div class="eyebrow"><span class="blink" aria-hidden="true"></span> YOUR DAILY RESET / COMING SOON</div>
-        <h1 id="headline">Stay<br><span class="outline">curious.</span><br><span class="accent">Stay ahead.</span></h1>
-        <p class="lead">Meet <strong>Nay Thit</strong> — your personalized daily news companion. Read what matters. Listen on the move. See the sources behind the story.</p>
-        <div class="actions" aria-label="App stores coming soon">
-          <!-- Launch: replace aria-disabled with a real href when your store page goes live. -->
-          <div class="store" aria-disabled="true" title="App Store link coming soon">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.54c.03 3.08 2.7 4.1 2.73 4.12-.02.07-.43 1.47-1.41 2.91-.85 1.24-1.72 2.47-3.1 2.5-1.36.03-1.8-.81-3.36-.81-1.55 0-2.04.78-3.33.84-1.33.05-2.35-1.34-3.2-2.58-1.74-2.51-3.07-7.1-1.28-10.2a4.95 4.95 0 0 1 4.18-2.55c1.3-.03 2.53.9 3.34.9.8 0 2.3-1.11 3.88-.95.66.03 2.52.27 3.72 2.01-.1.07-2.22 1.3-2.19 3.81zM14.37 5.05A4.8 4.8 0 0 0 15.48 1a4.9 4.9 0 0 0-3.2 1.92 4.55 4.55 0 0 0-1.14 3.95 4.1 4.1 0 0 0 3.23-1.82z"/></svg>
-            <span><small>COMING SOON TO</small><strong>App Store</strong></span>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#08090b" />
+    <meta
+      name="description"
+      content="Nay Thit. Less noise, more perspective. Personalized news, intelligent briefings, and audio for your everyday."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Nay Thit — A better way to stay in the know"
+    />
+    <meta
+      property="og:description"
+      content="Your world, thoughtfully briefed. Coming soon on iOS and Android."
+    />
+    <title>Nay Thit — Your day, in perspective</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #08090b;
+        --surface: #101114;
+        --surface2: #17181c;
+        --line: #2a2b2f;
+        --ink: #f7f7f6;
+        --muted: #96979b;
+        --dim: #686a70;
+        --accent: #d8fc68;
+        --max: 1240px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family:
+          Inter,
+          ui-sans-serif,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      button {
+        font: inherit;
+      }
+      ::selection {
+        background: var(--accent);
+        color: #08090b;
+      }
+      .wrap {
+        width: min(var(--max), calc(100% - 88px));
+        margin: auto;
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+      }
+      a:focus-visible,
+      button:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 4px;
+      }
+      nav.site-nav {
+        height: 82px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--line);
+      }
+      .brand {
+        display: inline-flex;
+        gap: 10px;
+        align-items: center;
+        white-space: nowrap;
+      }
+      .brand-glyph {
+        width: 30px;
+        height: 30px;
+        border: 1px solid #74767c;
+        display: grid;
+        place-items: center;
+        font-weight: 850;
+        font-size: 20px;
+        letter-spacing: -3px;
+        padding-right: 3px;
+      }
+      .brand-name {
+        font-weight: 800;
+        letter-spacing: -0.055em;
+        font-size: 23px;
+      }
+      .brand-name em {
+        font-style: normal;
+        color: var(--accent);
+      }
+      .navlinks {
+        display: flex;
+        align-items: center;
+        gap: 34px;
+        font-size: 12px;
+        font-weight: 650;
+        color: #b5b5b7;
+      }
+      .navlinks a:hover {
+        color: var(--ink);
+      }
+      .nav-cta {
+        background: var(--ink);
+        color: #0a0b0e !important;
+        border-radius: 3px;
+        padding: 12px 18px;
+        letter-spacing: -0.01em;
+      }
+      .nav-cta:hover {
+        background: var(--accent);
+      }
+      .statusbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font:
+          10px ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          monospace;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+        padding-top: 24px;
+      }
+      .status-tag {
+        display: inline-flex;
+        gap: 9px;
+        align-items: center;
+      }
+      .status-tag:before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        background: var(--accent);
+        display: inline-block;
+        box-shadow: 0 0 14px #d8fc6855;
+      }
+      .edition {
+        color: #64666c;
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: 1.04fr 0.96fr;
+        min-height: 700px;
+        border-bottom: 1px solid var(--line);
+      }
+      .hero-copy {
+        padding: 94px 35px 92px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      .kicker {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font:
+          11px ui-monospace,
+          Menlo,
+          monospace;
+        color: var(--accent);
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+      .kicker:before {
+        content: "/";
+        font-size: 19px;
+      }
+      .hero h1 {
+        font-size: clamp(65px, 7.7vw, 116px);
+        line-height: 0.96;
+        letter-spacing: -0.087em;
+        font-weight: 700;
+        margin: 31px 0 28px;
+      }
+      .hero h1 span {
+        color: var(--accent);
+      }
+      .hero-lead {
+        font-size: 17px;
+        line-height: 1.75;
+        color: #afb0b4;
+        max-width: 460px;
+        margin: 0;
+      }
+      .actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 38px;
+      }
+      .store {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        background: #f2f2ef;
+        color: #101114;
+        border: 1px solid #f2f2ef;
+        padding: 12px 20px;
+        border-radius: 3px;
+        min-width: 178px;
+        min-height: 64px;
+        cursor: default;
+      }
+      .store svg {
+        width: 26px;
+        height: 26px;
+        flex: none;
+      }
+      .store small {
+        display: block;
+        font:
+          9px ui-monospace,
+          Menlo,
+          monospace;
+        letter-spacing: 0.035em;
+        color: #555;
+        margin-bottom: 4px;
+      }
+      .store strong {
+        display: block;
+        font-size: 15px;
+        font-weight: 750;
+        letter-spacing: -0.03em;
+      }
+      .store-muted {
+        background: #111215;
+        color: #f4f4f3;
+        border-color: #535458;
+      }
+      .store-muted small {
+        color: #999;
+      }
+      .availability {
+        margin-top: 22px;
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        font:
+          11px ui-monospace,
+          Menlo,
+          monospace;
+        color: var(--dim);
+      }
+      .availability:before {
+        content: "";
+        height: 1px;
+        width: 23px;
+        background: #72747a;
+      }
+      .hero-visual {
+        min-height: 700px;
+        position: relative;
+        overflow: hidden;
+        border-left: 1px solid var(--line);
+        background: linear-gradient(
+          155deg,
+          #151619 0%,
+          #0d0e10 48%,
+          #090a0c 100%
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .hero-visual:before {
+        content: "N / T";
+        position: absolute;
+        top: 32px;
+        right: 31px;
+        color: #6e7076;
+        font:
+          11px ui-monospace,
+          Menlo,
+          monospace;
+        letter-spacing: 0.2em;
+      }
+      .hero-visual:after {
+        content: "001 — MOBILE EXPERIENCE";
+        position: absolute;
+        left: 30px;
+        bottom: 32px;
+        font:
+          10px ui-monospace,
+          Menlo,
+          monospace;
+        letter-spacing: 0.11em;
+        color: #72747b;
+      }
+      .visual-frame {
+        position: absolute;
+        inset: 42px;
+        border: 1px solid #26272b;
+        pointer-events: none;
+      }
+      .visual-accent {
+        position: absolute;
+        width: 220px;
+        height: 220px;
+        background: var(--accent);
+        right: -115px;
+        top: 35%;
+        transform: rotate(45deg);
+        filter: blur(1px);
+        opacity: 0.92;
+      }
+      .visual-accent:after {
+        content: "";
+        position: absolute;
+        inset: 28px;
+        background: #17181a;
+      }
+      .phone {
+        width: 296px;
+        height: 580px;
+        background: #f4f3f0;
+        border: 8px solid #26272b;
+        border-radius: 39px;
+        transform: rotate(-6deg);
+        box-shadow:
+          24px 28px 0 #292b2d,
+          40px 50px 90px #000a;
+        z-index: 1;
+        position: relative;
+        padding: 18px 16px;
+        color: #141518;
+        overflow: hidden;
+      }
+      .phone:after {
+        content: "";
+        position: absolute;
+        inset: 3px;
+        border: 1px solid #85868b;
+        border-radius: 28px;
+        pointer-events: none;
+      }
+      .phone-island {
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 83px;
+        height: 20px;
+        border-radius: 14px;
+        background: #252629;
+      }
+      .phone-status {
+        font-size: 10px;
+        font-weight: 750;
+        padding: 1px 9px 33px;
+      }
+      .phone-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .phone-logo {
+        font-size: 21px;
+        font-weight: 850;
+        letter-spacing: -1.3px;
+      }
+      .phone-logo span {
+        color: #869b28;
+      }
+      .phone-avatar {
+        width: 28px;
+        height: 28px;
+        border: 1px solid #bbb;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        font-size: 13px;
+      }
+      .phone-kicker {
+        font:
+          9px ui-monospace,
+          Menlo,
+          monospace;
+        color: #777;
+        letter-spacing: 0.1em;
+        margin-top: 32px;
+      }
+      .phone h2 {
+        font-size: 37px;
+        letter-spacing: -0.07em;
+        line-height: 1.02;
+        margin: 10px 0 17px;
+      }
+      .phone h2 span {
+        color: #879e25;
+      }
+      .chips {
+        display: flex;
+        gap: 6px;
+        margin: 0 0 18px;
+      }
+      .chip {
+        padding: 7px 10px;
+        border-radius: 3px;
+        background: #e4e4df;
+        font-size: 9px;
+        font-weight: 700;
+      }
+      .chip.on {
+        background: #17181b;
+        color: white;
+      }
+      .article {
+        background: #e6e6e1;
+        border: 1px solid #deded8;
+        border-radius: 9px;
+        padding: 14px;
+      }
+      .article small {
+        font:
+          9px ui-monospace,
+          Menlo,
+          monospace;
+        color: #6f7173;
+      }
+      .article-art {
+        height: 93px;
+        margin: 12px 0;
+        background: #13171b;
+        position: relative;
+        overflow: hidden;
+        border-radius: 4px;
+      }
+      .article-art:before {
+        content: "";
+        position: absolute;
+        inset: -30%;
+        background: linear-gradient(
+          145deg,
+          transparent 24%,
+          #4c535b 24% 28%,
+          transparent 28% 39%,
+          #a9b2b6 39% 44%,
+          #d8fc68 44% 48%,
+          transparent 48% 62%,
+          #575f66 62% 70%,
+          transparent 70%
+        );
+        transform: skewX(-14deg);
+      }
+      .article-title {
+        font-size: 16px;
+        font-weight: 770;
+        letter-spacing: -0.04em;
+      }
+      .article-desc {
+        font-size: 10px;
+        line-height: 1.45;
+        color: #686a6f;
+        margin-top: 6px;
+      }
+      .audio-card {
+        margin-top: 12px;
+        border: 1px solid #dadad6;
+        background: #fff;
+        border-radius: 8px;
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .play {
+        background: #202226;
+        border: 0;
+        color: white;
+        border-radius: 50%;
+        width: 33px;
+        height: 33px;
+        flex: none;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        font-size: 12px;
+      }
+      .audio-label {
+        font-size: 10px;
+        font-weight: 800;
+      }
+      .audio-desc {
+        font-size: 9px;
+        color: #757575;
+        margin-top: 4px;
+      }
+      .bars {
+        margin-left: auto;
+        height: 25px;
+        display: flex;
+        gap: 3px;
+        align-items: center;
+      }
+      .bars i {
+        width: 3px;
+        height: var(--height);
+        background: #849a28;
+      }
+      .bars.playing i {
+        animation: wave 0.65s infinite alternate;
+        animation-delay: var(--delay);
+      }
+      @keyframes wave {
+        to {
+          height: 5px;
+        }
+      }
+      .phone-bottom {
+        position: absolute;
+        bottom: 15px;
+        left: 25px;
+        right: 25px;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid #d7d7d3;
+        padding-top: 13px;
+        font-size: 9px;
+        color: #85878b;
+      }
+      .phone-bottom b {
+        color: #15171a;
+      }
+      .annotation {
+        position: absolute;
+        z-index: 2;
+        right: 17px;
+        bottom: 108px;
+        border: 1px solid #d8fc68;
+        background: #d8fc68;
+        color: #131515;
+        padding: 13px 17px;
+        font:
+          11px ui-monospace,
+          Menlo,
+          monospace;
+        line-height: 1.55;
+        transform: rotate(5deg);
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+      .ticker {
+        border-bottom: 1px solid var(--line);
+        padding: 22px 0;
+        color: #9b9ca1;
+        font:
+          11px ui-monospace,
+          Menlo,
+          monospace;
+        letter-spacing: 0.11em;
+        text-align: center;
+        display: flex;
+        gap: 22px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .ticker span {
+        color: var(--accent);
+      }
+      .section {
+        padding: 112px 0;
+      }
+      .section-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 38px;
+        margin-bottom: 43px;
+      }
+      .section-label {
+        font:
+          11px ui-monospace,
+          Menlo,
+          monospace;
+        color: var(--accent);
+        letter-spacing: 0.11em;
+      }
+      .section h2 {
+        font-weight: 680;
+        font-size: clamp(44px, 5.2vw, 72px);
+        letter-spacing: -0.075em;
+        line-height: 1.02;
+        margin: 17px 0 0;
+      }
+      .section-top p {
+        color: var(--muted);
+        line-height: 1.7;
+        max-width: 290px;
+        margin: 0;
+        font-size: 15px;
+      }
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border-top: 1px solid #55575b;
+        border-bottom: 1px solid #55575b;
+      }
+      .feature {
+        min-height: 270px;
+        padding: 34px 30px 39px 0;
+      }
+      .feature + .feature {
+        border-left: 1px solid var(--line);
+        padding-left: 29px;
+      }
+      .feature-index {
+        font:
+          11px ui-monospace,
+          Menlo,
+          monospace;
+        color: var(--accent);
+      }
+      .feature-icon {
+        font-size: 37px;
+        margin-top: 36px;
+        margin-bottom: 27px;
+        font-weight: 300;
+        line-height: 1;
+      }
+      .feature h3 {
+        font-size: 23px;
+        letter-spacing: -0.04em;
+        margin: 0 0 10px;
+      }
+      .feature p {
+        max-width: 300px;
+        font-size: 14px;
+        line-height: 1.7;
+        color: #97989c;
+        margin: 0;
+      }
+      .manifesto {
+        border-top: 1px solid var(--line);
+        padding: 62px 0 76px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+      }
+      .manifesto-left {
+        font:
+          11px ui-monospace,
+          Menlo,
+          monospace;
+        color: #818289;
+        letter-spacing: 0.1em;
+      }
+      .manifesto-right {
+        max-width: 650px;
+        font-size: clamp(23px, 3vw, 39px);
+        line-height: 1.28;
+        letter-spacing: -0.05em;
+        font-weight: 500;
+      }
+      .manifesto-right span {
+        color: var(--accent);
+      }
+      .closing {
+        background: #151619;
+        border-top: 1px solid #35363b;
+        padding: 97px 0 28px;
+      }
+      .closing .section-label {
+        color: #c9ef5f;
+      }
+      .closing h2 {
+        font-size: clamp(68px, 9.1vw, 135px);
+        letter-spacing: -0.09em;
+        line-height: 0.9;
+        margin: 22px 0 31px;
+        font-weight: 700;
+      }
+      .closing h2 span {
+        color: var(--accent);
+      }
+      .closing p {
+        color: #b6b7ba;
+        line-height: 1.75;
+        font-size: 16px;
+        max-width: 510px;
+      }
+      .closing .actions {
+        margin-top: 28px;
+      }
+      .footer {
+        border-top: 1px solid #393b3f;
+        margin-top: 105px;
+        padding: 24px 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: center;
+        color: #85878a;
+        font:
+          11px ui-monospace,
+          Menlo,
+          monospace;
+      }
+      .footerlinks {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 26px;
+      }
+      .footerlinks a:hover {
+        color: var(--accent);
+      }
+      #privacyView {
+        display: none;
+      }
+      .privacy-header {
+        padding: 92px 0 58px;
+        border-bottom: 1px solid #35363a;
+      }
+      .privacy-header h1 {
+        font-size: clamp(56px, 8vw, 100px);
+        line-height: 0.95;
+        letter-spacing: -0.085em;
+        margin: 21px 0;
+      }
+      .privacy-sub {
+        font-size: 16px;
+        color: var(--muted);
+        max-width: 730px;
+        line-height: 1.8;
+      }
+      .privacy-layout {
+        display: grid;
+        grid-template-columns: 230px minmax(0, 770px);
+        gap: 90px;
+        padding: 65px 0 130px;
+      }
+      .privacy-aside {
+        position: sticky;
+        top: 30px;
+        align-self: start;
+        color: var(--muted);
+        font:
+          11px ui-monospace,
+          Menlo,
+          monospace;
+        letter-spacing: 0.06em;
+        line-height: 2.1;
+      }
+      .privacy-aside a {
+        display: block;
+      }
+      .privacy-aside a:hover {
+        color: var(--accent);
+      }
+      .policy-section {
+        scroll-margin-top: 40px;
+        border-bottom: 1px solid var(--line);
+        padding: 0 0 37px;
+        margin: 0 0 37px;
+      }
+      .policy-section h2 {
+        font-size: 26px;
+        letter-spacing: -0.05em;
+        font-weight: 650;
+        margin: 0 0 18px;
+      }
+      .policy-section p,
+      .policy-section li {
+        color: #adaeb2;
+        font-size: 14px;
+        line-height: 1.9;
+      }
+      .policy-section ul {
+        padding-left: 20px;
+      }
+      .policy-section a {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        color: #e1e4e6;
+      }
+      .policy-section a:hover {
+        color: var(--accent);
+      }
+      .policy-callout {
+        padding: 18px 20px;
+        background: #1a1c1c;
+        border-left: 3px solid var(--accent);
+        color: #b5b6b9;
+        line-height: 1.7;
+        font-size: 13px;
+        margin-top: 17px;
+      }
+      .privacy-footer {
+        background: #141518;
+        padding: 26px 0;
+        border-top: 1px solid var(--line);
+      }
+      .privacy-footer .wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        color: #97989b;
+        font-size: 12px;
+      }
+      @media (max-width: 1050px) {
+        .wrap {
+          width: calc(100% - 52px);
+        }
+        .hero h1 {
+          font-size: clamp(61px, 7.5vw, 88px);
+        }
+        .hero-visual {
+          min-height: 660px;
+        }
+        .hero {
+          min-height: 660px;
+        }
+        .phone {
+          transform: rotate(-5deg) scale(0.88);
+        }
+        .privacy-layout {
+          gap: 35px;
+          grid-template-columns: 190px minmax(0, 1fr);
+        }
+      }
+      @media (max-width: 760px) {
+        .wrap {
+          width: calc(100% - 36px);
+        }
+        nav.site-nav {
+          height: 72px;
+        }
+        .navlinks {
+          gap: 16px;
+        }
+        .navlinks a:nth-child(1) {
+          display: none;
+        }
+        .nav-cta {
+          padding: 11px 12px;
+        }
+        .statusbar {
+          padding-top: 19px;
+        }
+        .edition {
+          display: none;
+        }
+        .hero {
+          grid-template-columns: 1fr;
+        }
+        .hero-copy {
+          padding: 84px 0 72px;
+        }
+        .hero h1 {
+          font-size: clamp(64px, 13vw, 95px);
+        }
+        .hero-visual {
+          border-left: 0;
+          border-top: 1px solid var(--line);
+          min-height: 620px;
+        }
+        .visual-frame {
+          inset: 23px;
+        }
+        .phone {
+          transform: rotate(-5deg) scale(0.9);
+        }
+        .annotation {
+          right: 4px;
+        }
+        .ticker {
+          gap: 12px;
+          font-size: 9px;
+          padding: 20px 0;
+        }
+        .section {
+          padding: 80px 0;
+        }
+        .section-top {
+          display: block;
+        }
+        .section-top p {
+          margin-top: 20px;
+        }
+        .feature-grid {
+          grid-template-columns: 1fr;
+        }
+        .feature {
+          min-height: 0;
+          padding: 27px 0 30px !important;
+        }
+        .feature + .feature {
+          border-left: 0;
+          border-top: 1px solid var(--line);
+        }
+        .feature-icon {
+          margin: 21px 0;
+        }
+        .manifesto {
+          display: block;
+          padding: 48px 0;
+        }
+        .manifesto-right {
+          margin-top: 25px;
+        }
+        .closing {
+          padding-top: 76px;
+        }
+        .closing h2 {
+          font-size: clamp(65px, 13.2vw, 100px);
+        }
+        .footer {
+          margin-top: 75px;
+          flex-direction: column;
+          align-items: flex-start;
+          line-height: 1.8;
+        }
+        .privacy-header {
+          padding: 70px 0 42px;
+        }
+        .privacy-layout {
+          display: block;
+          padding: 42px 0 85px;
+        }
+        .privacy-aside {
+          position: static;
+          display: flex;
+          gap: 17px;
+          flex-wrap: wrap;
+          margin-bottom: 38px;
+        }
+        .privacy-aside a {
+          display: inline-block;
+        }
+        .privacy-footer .wrap {
+          flex-direction: column;
+        }
+      }
+      @media (max-width: 390px) {
+        .hero h1 {
+          font-size: 61px;
+        }
+        .hero-visual {
+          min-height: 560px;
+        }
+        .phone {
+          transform: rotate(-5deg) scale(0.8);
+        }
+        .annotation {
+          font-size: 9px;
+          bottom: 78px;
+        }
+        .store {
+          min-width: 152px;
+          padding: 11px 12px;
+        }
+        .navlinks {
+          gap: 8px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *:before,
+        *:after {
+          animation: none !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="wrap">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/" class="brand" data-route="home" aria-label="Nay Thit home"
+          ><span class="brand-glyph" aria-hidden="true">N</span
+          ><span class="brand-name">naythit<em>.</em></span></a
+        >
+        <div class="navlinks">
+          <a href="/#features" data-route="features">The experience</a
+          ><a href="/privacy" data-route="privacy">Privacy</a
+          ><a href="/#download" data-route="download" class="nav-cta"
+            >Get the app ↗</a
+          >
+        </div>
+      </nav>
+    </header>
+    <div id="homeView">
+      <div class="wrap statusbar">
+        <div class="status-tag">IN DEVELOPMENT / COMING SOON</div>
+        <div class="edition">A FRESH PERSPECTIVE — ISSUE 001</div>
+      </div>
+      <main>
+        <section class="wrap hero" aria-labelledby="heroTitle">
+          <div class="hero-copy">
+            <div class="kicker">THE NEWS, REIMAGINED</div>
+            <h1 id="heroTitle">Less noise.<br />More <span>signal.</span></h1>
+            <p class="hero-lead">
+              Your world doesn't stop moving. Stay a step ahead with
+              personalized news, thoughtful summaries, and audio briefings made
+              for your day.
+            </p>
+            <div class="actions" aria-label="App downloads coming soon">
+              <div
+                class="store"
+                aria-disabled="true"
+                title="Coming soon to the App Store"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M17.05 12.54c.03 3.08 2.7 4.1 2.73 4.12-.02.07-.43 1.47-1.41 2.91-.85 1.24-1.72 2.47-3.1 2.5-1.36.03-1.8-.81-3.36-.81-1.55 0-2.04.78-3.33.84-1.33.05-2.35-1.34-3.2-2.58-1.74-2.51-3.07-7.1-1.28-10.2a4.95 4.95 0 0 1 4.18-2.55c1.3-.03 2.53.9 3.34.9.8 0 2.3-1.11 3.88-.95.66.03 2.52.27 3.72 2.01-.1.07-2.22 1.3-2.19 3.81zM14.37 5.05A4.8 4.8 0 0 0 15.48 1a4.9 4.9 0 0 0-3.2 1.92 4.55 4.55 0 0 0-1.14 3.95 4.1 4.1 0 0 0 3.23-1.82z"
+                  /></svg
+                ><span
+                  ><small>COMING SOON TO</small><strong>App Store</strong></span
+                >
+              </div>
+              <div
+                class="store store-muted"
+                aria-disabled="true"
+                title="Coming soon to Google Play"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M3.45 1.59A2.06 2.06 0 0 0 3 2.95v18.1c0 .54.15.98.45 1.36L13.6 12 3.45 1.59zm1.07-.52 11.7 6.77-2.62 2.72L4.52 1.07zm12.5 7.23 3.22 1.86c1.32.76 1.32 2.92 0 3.68l-3.22 1.86L14.42 12l2.6-3.7zm-.8 7.86-11.7 6.77 9.08-9.49 2.62 2.72z"
+                  /></svg
+                ><span
+                  ><small>COMING SOON TO</small
+                  ><strong>Google Play</strong></span
+                >
+              </div>
+            </div>
+            <div class="availability">
+              Available on iOS and Android at launch
+            </div>
           </div>
-          <div class="store" aria-disabled="true" title="Google Play link coming soon">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.45 1.59A2.06 2.06 0 0 0 3 2.95v18.1c0 .54.15.98.45 1.36L13.6 12 3.45 1.59zm1.07-.52 11.7 6.77-2.62 2.72L4.52 1.07zm12.5 7.23 3.22 1.86c1.32.76 1.32 2.92 0 3.68l-3.22 1.86L14.42 12l2.6-3.7zm-.8 7.86-11.7 6.77 9.08-9.49 2.62 2.72z"/></svg>
-            <span><small>COMING SOON TO</small><strong>Google Play</strong></span>
+          <div
+            class="hero-visual"
+            aria-label="Illustrative Nay Thit mobile app preview"
+          >
+            <div class="visual-frame"></div>
+            <div class="visual-accent" aria-hidden="true"></div>
+            <div
+              class="phone"
+              role="group"
+              aria-label="App concept, not a screenshot"
+            >
+              <div class="phone-island"></div>
+              <div class="phone-status">9:41</div>
+              <div class="phone-head">
+                <span class="phone-logo">naythit<span>.</span></span
+                ><span class="phone-avatar">◉</span>
+              </div>
+              <div class="phone-kicker">FRIDAY / YOUR DAILY EDITION</div>
+              <h2>Good morning.<br /><span>Stay curious.</span></h2>
+              <div class="chips">
+                <span class="chip on">For you</span
+                ><span class="chip">World</span><span class="chip">Tech</span
+                ><span class="chip">Myanmar</span>
+              </div>
+              <div class="article">
+                <small>01 / TODAY'S FOCUS</small>
+                <div class="article-art"></div>
+                <div class="article-title">The stories shaping your day.</div>
+                <div class="article-desc">
+                  What matters, clearly explained and easy to explore.
+                </div>
+              </div>
+              <div class="audio-card">
+                <button
+                  id="previewPlay"
+                  class="play"
+                  type="button"
+                  aria-label="Animate audio preview"
+                  aria-pressed="false"
+                >
+                  ▶
+                </button>
+                <div>
+                  <div class="audio-label">Your morning briefing</div>
+                  <div class="audio-desc">Audio experience preview</div>
+                </div>
+                <div class="bars" id="soundBars" aria-hidden="true">
+                  <i style="--height: 8px; --delay: 0s"></i
+                  ><i style="--height: 16px; --delay: 0.15s"></i
+                  ><i style="--height: 10px; --delay: 0.25s"></i
+                  ><i style="--height: 21px; --delay: 0.1s"></i
+                  ><i style="--height: 12px; --delay: 0.3s"></i>
+                </div>
+              </div>
+              <div class="phone-bottom">
+                <b>⌂ Home</b><span>▤ News</span><span>♫ Listen</span
+                ><span>⚙ Settings</span>
+              </div>
+            </div>
+            <div class="annotation">
+              BUILT FOR REAL LIFE.<br />NOT ENDLESS SCROLLING. ↗
+            </div>
+          </div>
+        </section>
+        <div class="ticker">
+          PERSONALIZED NEWS <span>/</span> AUDIO BRIEFINGS <span>/</span> CLEAR
+          SOURCES <span>/</span> MADE FOR YOUR DAY
+        </div>
+        <section
+          class="wrap section"
+          id="features"
+          aria-labelledby="featuresTitle"
+        >
+          <div class="section-top">
+            <div>
+              <div class="section-label">/ 001 — THE EXPERIENCE</div>
+              <h2 id="featuresTitle">Stay informed.<br />Stay in control.</h2>
+            </div>
+            <p>
+              Everything you need to keep up with the world. None of the noise
+              you don't.
+            </p>
+          </div>
+          <div class="feature-grid">
+            <article class="feature">
+              <div class="feature-index">[ 01 ]</div>
+              <div class="feature-icon" aria-hidden="true">◎</div>
+              <h3>Made for you.</h3>
+              <p>
+                Choose your interests and get news that fits your world, not a
+                one-size-fits-all feed.
+              </p>
+            </article>
+            <article class="feature">
+              <div class="feature-index">[ 02 ]</div>
+              <div class="feature-icon" aria-hidden="true">◖))</div>
+              <h3>Listen on the move.</h3>
+              <p>
+                Take your briefing with you. Audio updates designed for your
+                mornings and everything in between.
+              </p>
+            </article>
+            <article class="feature">
+              <div class="feature-index">[ 03 ]</div>
+              <div class="feature-icon" aria-hidden="true">↗</div>
+              <h3>Know the source.</h3>
+              <p>
+                Go beyond the headline. Follow the original reporting and make
+                up your own mind.
+              </p>
+            </article>
+          </div>
+        </section>
+        <section class="wrap manifesto">
+          <div class="manifesto-left">OUR IDEA / 001</div>
+          <div class="manifesto-right">
+            Good information should create <span>clarity,</span> not clutter.
+            We're making it easier to start every day with perspective.
+          </div>
+        </section>
+        <section class="closing" id="download" aria-labelledby="downloadTitle">
+          <div class="wrap">
+            <div class="section-label">/ THE NEXT CHAPTER STARTS SOON</div>
+            <h2 id="downloadTitle">
+              A better day.<br /><span>On its way.</span>
+            </h2>
+            <p>
+              Nay Thit is being built for people who want to know more and
+              scroll less. We're getting ready for our first release.
+            </p>
+            <div class="actions">
+              <div class="store" aria-disabled="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M17.05 12.54c.03 3.08 2.7 4.1 2.73 4.12-.02.07-.43 1.47-1.41 2.91-.85 1.24-1.72 2.47-3.1 2.5-1.36.03-1.8-.81-3.36-.81-1.55 0-2.04.78-3.33.84-1.33.05-2.35-1.34-3.2-2.58-1.74-2.51-3.07-7.1-1.28-10.2a4.95 4.95 0 0 1 4.18-2.55c1.3-.03 2.53.9 3.34.9.8 0 2.3-1.11 3.88-.95.66.03 2.52.27 3.72 2.01-.1.07-2.22 1.3-2.19 3.81zM14.37 5.05A4.8 4.8 0 0 0 15.48 1a4.9 4.9 0 0 0-3.2 1.92 4.55 4.55 0 0 0-1.14 3.95 4.1 4.1 0 0 0 3.23-1.82z"
+                  /></svg
+                ><span
+                  ><small>COMING SOON TO</small><strong>App Store</strong></span
+                >
+              </div>
+              <div class="store store-muted" aria-disabled="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M3.45 1.59A2.06 2.06 0 0 0 3 2.95v18.1c0 .54.15.98.45 1.36L13.6 12 3.45 1.59zm1.07-.52 11.7 6.77-2.62 2.72L4.52 1.07zm12.5 7.23 3.22 1.86c1.32.76 1.32 2.92 0 3.68l-3.22 1.86L14.42 12l2.6-3.7zm-.8 7.86-11.7 6.77-2.62 2.72L4.52 1.07zm12.5 7.23 3.22 1.86c1.32.76 1.32 2.92 0 3.68l-3.22 1.86L14.42 12l2.6-3.7z"
+                  /></svg
+                ><span
+                  ><small>COMING SOON TO</small
+                  ><strong>Google Play</strong></span
+                >
+              </div>
+            </div>
+            <footer class="footer">
+              <a class="brand" href="/" data-route="home"
+                ><span class="brand-name">naythit<em>.</em></span></a
+              ><span
+                >© <span id="year">2026</span> Nay Thit. Built for curious
+                minds.</span
+              >
+              <div class="footerlinks">
+                <a href="#features">Features</a
+                ><a href="/privacy" data-route="privacy">Privacy policy</a
+                ><a href="mailto:swa.developer.expert@gmail.com">Contact</a>
+              </div>
+            </footer>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div id="privacyView">
+      <main>
+        <section class="wrap privacy-header">
+          <div class="section-label">/ NAY THIT — LEGAL</div>
+          <h1>
+            Privacy<br />policy<span style="color: var(--accent)">.</span>
+          </h1>
+          <p class="privacy-sub">
+            A clear overview of the information Nay Thit may process to deliver
+            news, account features and audio briefings. This document must be
+            reviewed against the app's actual production behavior before
+            publication.
+          </p>
+          <div
+            style="
+              font:
+                11px ui-monospace,
+                Menlo,
+                monospace;
+              color: #85878c;
+              margin-top: 26px;
+            "
+          >
+            LAST UPDATED / 27 NOVEMBER 2026
+          </div>
+        </section>
+        <div class="wrap privacy-layout">
+          <aside class="privacy-aside" aria-label="Privacy sections">
+            <div>ON THIS PAGE</div>
+            <a href="#scope">01 / Overview</a
+            ><a href="#data">02 / Information</a><a href="#use">03 / Purposes</a
+            ><a href="#providers">04 / Services</a
+            ><a href="#ads">05 / Advertising</a
+            ><a href="#choices">06 / Choices</a
+            ><a href="#security">07 / Retention & security</a
+            ><a href="#children">08 / Children</a
+            ><a href="#contact">09 / Contact</a>
+          </aside>
+          <div>
+            <section class="policy-section" id="scope">
+              <h2>01 / Overview</h2>
+              <p>
+                Nay Thit ("we", "us", "our") is a mobile news and audio briefing
+                application. This policy describes how information is processed
+                when you use the app, interact with its content or contact the
+                developer.
+              </p>
+              <p>
+                This policy applies to the Nay Thit mobile application and its
+                related website. Our practices may change as features move from
+                development into public release.
+              </p>
+            </section>
+            <section class="policy-section" id="data">
+              <h2>02 / Information we process</h2>
+              <ul>
+                <li>
+                  <strong>Account and profile details:</strong> email address,
+                  account identifiers, display name, and any optional profile
+                  photo or phone number you choose to supply.
+                </li>
+                <li>
+                  <strong>Preferences:</strong> selected news categories and
+                  other settings used to personalize the reading and audio
+                  experience.
+                </li>
+                <li>
+                  <strong>App activity:</strong> interactions required to load
+                  news, serve audio briefings, diagnose errors and protect the
+                  service.
+                </li>
+                <li>
+                  <strong>Device and advertising information:</strong> if ads
+                  are enabled, Google AdMob may access device-related
+                  identifiers and information about ad interactions subject to
+                  applicable consent and device settings.
+                </li>
+                <li>
+                  <strong>Optional communications:</strong> information you send
+                  when requesting support or exercising privacy rights.
+                </li>
+              </ul>
+              <p>
+                Some information is provided directly by you; other information
+                is generated when the app and its service providers operate.
+              </p>
+            </section>
+            <section class="policy-section" id="use">
+              <h2>03 / How information is used</h2>
+              <p>
+                We process information to sign users in, maintain profiles,
+                retrieve and personalize news, generate or deliver audio
+                briefings, remember preferences, protect the app from misuse,
+                respond to support requests, and improve reliability. If
+                advertising is enabled, relevant data may also be processed to
+                display, measure and help prevent fraud involving ads.
+              </p>
+            </section>
+            <section class="policy-section" id="providers">
+              <h2>04 / Third-party services</h2>
+              <p>
+                Nay Thit uses or is integrating external technology providers
+                for particular functions. These may include Supabase
+                (authentication, database and storage), Google Sign-In, Google
+                AdMob (advertising), hosting providers and AI or text-to-speech
+                services supporting briefing generation. Providers may process
+                data in accordance with their own policies and service terms.
+              </p>
+              <p>
+                Before release, this section should list the production
+                providers actually in use, with their roles and any relevant
+                links to their privacy documentation.
+              </p>
+            </section>
+            <section class="policy-section" id="ads">
+              <h2>05 / Advertising and consent</h2>
+              <p>
+                Nay Thit is preparing to use Google AdMob to display in-app
+                advertising. AdMob and its partners may process device
+                information, advertising identifiers and ad interaction data.
+                Where required, the app will present a consent or privacy
+                choices message and apply users' selections when requesting ads.
+              </p>
+              <p>
+                During development, Google test advertisements may appear. A
+                test advertisement is not a paid advertisement served to an end
+                user.
+              </p>
+              <p>
+                For more on Google's use of information, see
+                <a
+                  href="https://policies.google.com/technologies/partner-sites"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >How Google uses information from sites or apps that use its
+                  services</a
+                >.
+              </p>
+            </section>
+            <section class="policy-section" id="choices">
+              <h2>06 / Your choices and rights</h2>
+              <p>
+                You can manage available news preferences and profile fields
+                within the app. Depending on your location and applicable laws,
+                you may be able to request access to, correction of or deletion
+                of your personal information, and make choices about
+                advertising-related processing.
+              </p>
+              <p>
+                To request account or data deletion, contact
+                <a
+                  href="mailto:swa.developer.expert@gmail.com?subject=Nay%20Thit%20Data%20Deletion"
+                  >swa.developer.expert@gmail.com</a
+                >. Include the email address associated with your Nay Thit
+                account, but never send a password. Identity verification may be
+                required to protect your account.
+              </p>
+              <div class="policy-callout">
+                Before publication: verify the exact in-app deletion process and
+                ensure this section accurately describes what data is deleted,
+                what may be retained and for how long. Google Play may require a
+                dedicated account-deletion web resource.
+              </div>
+            </section>
+            <section class="policy-section" id="security">
+              <h2>07 / Retention and security</h2>
+              <p>
+                We apply access controls and other safeguards intended to
+                protect the information used by Nay Thit. No online service can
+                guarantee absolute security. We retain information for as long
+                as needed for relevant app functions, legitimate operational
+                purposes and applicable legal requirements; actual retention
+                periods differ depending on the category of data.
+              </p>
+              <p>
+                We will update this policy with more specific retention and
+                deletion periods before the app's public release.
+              </p>
+            </section>
+            <section class="policy-section" id="children">
+              <h2>08 / Children's privacy</h2>
+              <p>
+                Nay Thit is a general-interest news product and is not designed
+                specifically for children. Age-related access rules and
+                advertising protections will be applied as required by
+                applicable law and distribution platform policies.
+              </p>
+            </section>
+            <section class="policy-section" id="contact">
+              <h2>09 / Contact and updates</h2>
+              <p>
+                For privacy questions or data rights requests, contact
+                <a href="mailto:swa.developer.expert@gmail.com"
+                  >swa.developer.expert@gmail.com</a
+                >.
+              </p>
+              <p>
+                We may update this policy as Nay Thit changes. We will publish
+                the effective date and update this page to reflect material
+                changes in information practices.
+              </p>
+            </section>
           </div>
         </div>
-        <div class="coming-note">Download links will appear here at launch.</div>
-      </div>
-      <div class="hero-art" aria-label="Illustrative preview of the Nay Thit mobile app">
-        <div class="orbit-label">DESIGNED FOR YOUR DAY</div>
-        <div class="phone" role="img" aria-label="Nay Thit app concept showing a daily news briefing and audio player">
-          <div class="island"></div>
-          <div class="phone-time">9:41</div>
-          <div class="phone-top"><div class="mini-logo">naythit<span class="mini-dot">.</span></div><div class="phone-avatar">●</div></div>
-          <div class="phone-date">YOUR DAILY EDITION / PREVIEW</div>
-          <div class="phone-title">A fresh take<br>on <span>today.</span></div>
-          <div class="topic-row"><span class="topic active">For you</span><span class="topic">Tech</span><span class="topic">World</span><span class="topic">Myanmar</span></div>
-          <div class="news-box"><div class="news-label">01 / THE DAILY BRIEF</div><div class="news-art"></div><div class="news-heading">Your world, in focus.</div><div class="news-detail">A curated briefing built around the topics you care about.</div></div>
-          <div class="audio"><button class="play" id="previewPlay" type="button" aria-label="Animate audio preview" aria-pressed="false">▶</button><div class="audio-copy"><div class="audio-name">Listen to your briefing</div><div class="audio-caption">Audio experience preview</div></div><div class="sound-bars" id="soundBars" aria-hidden="true"><i style="--h:8px;--d:.1s"></i><i style="--h:15px;--d:.3s"></i><i style="--h:11px;--d:.2s"></i><i style="--h:18px;--d:.4s"></i><i style="--h:9px;--d:.15s"></i><i style="--h:14px;--d:.35s"></i><i style="--h:7px;--d:.05s"></i></div></div>
-          <div class="phone-nav"><strong>◉ Home</strong><span>▤ Stories</span><span>♫ Listen</span><span>⚙ Settings</span></div>
+      </main>
+      <footer class="privacy-footer">
+        <div class="wrap">
+          <span>© <span id="privacyYear">2026</span> Nay Thit</span
+          ><a href="/" data-route="home">← Back to the homepage</a>
         </div>
-        <div class="float-tag">LESS NOISE.<br>MORE SIGNAL. ↗</div>
-        <div class="stat-stamp">NAY THIT / <b>01</b><br>NEW DAY. NEW PERSPECTIVE.</div>
-      </div>
-    </section>
-    <div class="marquee" aria-hidden="true">PERSONALIZED NEWS <span class="sep">/</span> AUDIO BRIEFINGS <span class="sep">/</span> STORIES WITH SOURCES <span class="sep">/</span> MADE FOR YOUR DAY <span class="sep">/</span> COMING SOON</div>
-    <section class="wrap section" id="features" aria-labelledby="features-title">
-      <div class="section-head"><div><div class="section-index">/ 001 — THE EXPERIENCE</div><h2 id="features-title">News, on your<br>own terms.</h2></div><p class="section-intro">No endless scroll required. A thoughtful way to follow the topics that matter to you.</p></div>
-      <div class="feature-grid">
-        <article class="feature"><span class="feature-no">[ 01 ]</span><div class="feature-icon" aria-hidden="true">◎</div><h3>Made personal.</h3><p>Choose your interests and get a daily briefing shaped around what you want to know.</p></article>
-        <article class="feature"><span class="feature-no">[ 02 ]</span><div class="feature-icon" aria-hidden="true">◖))</div><h3>Listen anywhere.</h3><p>Turn your daily update into an audio experience for commutes, walks, and busy mornings.</p></article>
-        <article class="feature"><span class="feature-no">[ 03 ]</span><div class="feature-icon" aria-hidden="true">↗</div><h3>Go to the source.</h3><p>Move beyond the summary with references to the original reporting when you want more context.</p></article>
-      </div>
-    </section>
-    <section class="bottom" id="download" aria-labelledby="download-title"><div class="wrap bottom-inner"><div class="bottom-label">/ SOMETHING NEW IS ON THE WAY</div><h2 id="download-title">A better<br><span>morning.</span><br>Loading<span>...</span></h2><p>We're building Nay Thit for people who want to stay informed without getting lost in the noise. iOS and Android download links are coming soon.</p><div class="actions"><div class="store" aria-disabled="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.54c.03 3.08 2.7 4.1 2.73 4.12-.02.07-.43 1.47-1.41 2.91-.85 1.24-1.72 2.47-3.1 2.5-1.36.03-1.8-.81-3.36-.81-1.55 0-2.04.78-3.33.84-1.33.05-2.35-1.34-3.2-2.58-1.74-2.51-3.07-7.1-1.28-10.2a4.95 4.95 0 0 1 4.18-2.55c1.3-.03 2.53.9 3.34.9.8 0 2.3-1.11 3.88-.95.66.03 2.52.27 3.72 2.01-.1.07-2.22 1.3-2.19 3.81zM14.37 5.05A4.8 4.8 0 0 0 15.48 1a4.9 4.9 0 0 0-3.2 1.92 4.55 4.55 0 0 0-1.14 3.95 4.1 4.1 0 0 0 3.23-1.82z"/></svg><span><small>COMING SOON TO</small><strong>App Store</strong></span></div><div class="store" aria-disabled="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.45 1.59A2.06 2.06 0 0 0 3 2.95v18.1c0 .54.15.98.45 1.36L13.6 12 3.45 1.59zm1.07-.52 11.7 6.77-2.62 2.72L4.52 1.07zm12.5 7.23 3.22 1.86c1.32.76 1.32 2.92 0 3.68l-3.22 1.86L14.42 12l2.6-3.7zm-.8 7.86-11.7 6.77 9.08-9.49 2.62 2.72z"/></svg><span><small>COMING SOON TO</small><strong>Google Play</strong></span></div></div><footer class="footer"><a href="#top"><strong>naythit<span style="color:var(--red)">.</span></strong></a><span>© <span id="year">2026</span> Nay Thit. Made for curious minds.</span><div class="right"><a href="#features">Features</a><a href="#top">Back to top ↑</a></div></footer></div></section>
-  </main>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const play = document.getElementById('previewPlay');
-    const bars = document.getElementById('soundBars');
-    play.addEventListener('click', () => {
-      const active = play.getAttribute('aria-pressed') !== 'true';
-      play.setAttribute('aria-pressed', String(active));
-      play.textContent = active ? 'Ⅱ' : '▶';
-      play.setAttribute('aria-label', active ? 'Stop audio animation preview' : 'Animate audio preview');
-      bars.classList.toggle('playing', active);
-    });
-  </script>
-</body>
+      </footer>
+    </div>
+    <script>
+      (function () {
+        const home = document.getElementById("homeView"),
+          privacy = document.getElementById("privacyView");
+        function render() {
+          const isPrivacy = location.pathname.replace(/\/$/, "") === "/privacy";
+          home.style.display = isPrivacy ? "none" : "block";
+          privacy.style.display = isPrivacy ? "block" : "none";
+          document.title = isPrivacy
+            ? "Privacy Policy — Nay Thit"
+            : "Nay Thit — Your day, in perspective";
+          document
+            .querySelector('meta[name="description"]')
+            .setAttribute(
+              "content",
+              isPrivacy
+                ? "Read the Nay Thit privacy policy and learn about data, advertising and your choices."
+                : "Nay Thit. Less noise, more perspective. Personalized news and audio briefings. Coming soon.",
+            );
+        }
+        document.querySelectorAll("[data-route]").forEach((a) =>
+          a.addEventListener("click", (e) => {
+            const url = new URL(a.href);
+            if (url.origin !== location.origin) return;
+            e.preventDefault();
+            history.pushState(null, "", url.pathname + url.hash);
+            render();
+            if (url.hash) {
+              requestAnimationFrame(() =>
+                document
+                  .querySelector(url.hash)
+                  ?.scrollIntoView({ behavior: "smooth" }),
+              );
+            } else {
+              scrollTo(0, 0);
+            }
+          }),
+        );
+        addEventListener("popstate", () => {
+          render();
+          scrollTo(0, 0);
+        });
+        render();
+        const y = new Date().getFullYear();
+        document.getElementById("year").textContent = y;
+        document.getElementById("privacyYear").textContent = y;
+        const play = document.getElementById("previewPlay"),
+          bars = document.getElementById("soundBars");
+        play.addEventListener("click", () => {
+          const active = play.getAttribute("aria-pressed") !== "true";
+          play.setAttribute("aria-pressed", String(active));
+          play.textContent = active ? "Ⅱ" : "▶";
+          play.setAttribute(
+            "aria-label",
+            active ? "Stop animation preview" : "Animate audio preview",
+          );
+          bars.classList.toggle("playing", active);
+        });
+      })();
+    </script>
+  </body>
 </html>
