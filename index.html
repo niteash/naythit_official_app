@@ -15,7 +15,7 @@
     />
     <meta
       property="og:description"
-      content="Your world, thoughtfully briefed. Coming soon on iOS and Android."
+      content="Your world, thoughtfully briefed. Preparing for Android launch."
     />
     <title>Nay Thit — Your day, in perspective</title>
     <style>
@@ -1230,10 +1230,9 @@
             Privacy<br />policy<span style="color: var(--accent)">.</span>
           </h1>
           <p class="privacy-sub">
-            A clear overview of the information Nay Thit may process to deliver
-            news, account features and audio briefings. This document must be
-            reviewed against the app's actual production behavior before
-            publication.
+            How Nay Thit handles account information, preferences, news and
+            audio features, notifications, advertising consent and website
+            requests.
           </p>
           <div
             style="
@@ -1245,7 +1244,7 @@
               margin-top: 26px;
             "
           >
-            LAST UPDATED / 27 NOVEMBER 2026
+            LAST UPDATED / 28 NOVEMBER 2026
           </div>
         </section>
         <div class="wrap privacy-layout">
@@ -1271,37 +1270,69 @@
               </p>
               <p>
                 This policy applies to the Nay Thit mobile application and its
-                related website. Our practices may change as features move from
-                development into public release.
+                related website. At the date above, live advertising is disabled
+                by default in production configuration. Android development
+                builds may display Google's test ads after the consent flow
+                permits an ad request.
               </p>
             </section>
             <section class="policy-section" id="data">
               <h2>02 / Information we process</h2>
               <ul>
                 <li>
-                  <strong>Account and profile details:</strong> email address,
-                  account identifiers, display name, and any optional profile
-                  photo or phone number you choose to supply.
+                  <strong>Account and sign-in details:</strong> Supabase Auth
+                  processes your email address, account identifier and sign-in
+                  credentials. You may sign in with Google or with an email and
+                  password. Nay Thit does not receive your Google password or a
+                  readable copy of your account password.
+                </li>
+                <li>
+                  <strong>Optional profile details:</strong> display name,
+                  international-format mobile number and a profile image. The
+                  mobile number is not used for OTP sign-in.
                 </li>
                 <li>
                   <strong>Preferences:</strong> selected news categories and
-                  other settings used to personalize the reading and audio
-                  experience.
+                  settings such as delivery time and timezone, briefing length,
+                  notification choices, data-saving options, crypto watchlist
+                  and optional horoscope sign.
                 </li>
                 <li>
-                  <strong>App activity:</strong> interactions required to load
-                  news, serve audio briefings, diagnose errors and protect the
-                  service.
+                  <strong>News and listening activity:</strong> saved articles,
+                  story feedback, briefing requests, generated scripts, audio
+                  records, source references, listening progress and reports
+                  submitted about summaries or pronunciation.
                 </li>
                 <li>
-                  <strong>Device and advertising information:</strong> if ads
-                  are enabled, Google AdMob may access device-related
-                  identifiers and information about ad interactions subject to
-                  applicable consent and device settings.
+                  <strong>Device and notification information:</strong> an
+                  Android Firebase Cloud Messaging token is stored when you opt
+                  in to notifications. The app also keeps an authenticated
+                  session, preferences and any downloaded audio in app-private
+                  storage on your device.
+                </li>
+                <li>
+                  <strong>Purchase information:</strong> RevenueCat and the app
+                  store process subscription and entitlement information. Nay
+                  Thit does not receive your full payment-card number.
+                </li>
+                <li>
+                  <strong>Advertising and consent information:</strong> Google's
+                  User Messaging Platform (UMP) checks whether a consent or
+                  privacy-options message is required on Android. If an ad is
+                  requested, Google AdMob and its partners may process IP
+                  address, device or advertising identifiers, consent choices
+                  and ad impressions or interactions as permitted by your
+                  settings and applicable law.
                 </li>
                 <li>
                   <strong>Optional communications:</strong> information you send
                   when requesting support or exercising privacy rights.
+                </li>
+                <li>
+                  <strong>Technical request information:</strong> the API and
+                  website hosting providers receive ordinary request data such
+                  as IP address, user agent, requested URL, timestamps and error
+                  information in operational logs.
                 </li>
               </ul>
               <p>
@@ -1315,40 +1346,61 @@
                 We process information to sign users in, maintain profiles,
                 retrieve and personalize news, generate or deliver audio
                 briefings, remember preferences, protect the app from misuse,
-                respond to support requests, and improve reliability. If
-                advertising is enabled, relevant data may also be processed to
-                display, measure and help prevent fraud involving ads.
+                provide purchases and notifications, respond to support
+                requests, and improve reliability. If advertising is enabled,
+                relevant data may also be processed to display and measure ads
+                and prevent advertising fraud.
+              </p>
+              <p>
+                Nay Thit does not currently include a separate product
+                analytics, session-recording or crash-reporting SDK. The landing
+                website source does not set cookies or load an analytics script.
+                Hosting, authentication, advertising and other providers may
+                still create their own operational records as described here
+                and in their policies.
               </p>
             </section>
             <section class="policy-section" id="providers">
               <h2>04 / Third-party services</h2>
+              <ul>
+                <li><strong>Supabase:</strong> authentication, database records, private profile images and private briefing-audio storage.</li>
+                <li><strong>Google:</strong> Google Sign-In, UMP and AdMob, Firebase Cloud Messaging, and Google Play services.</li>
+                <li><strong>RevenueCat:</strong> subscription entitlement verification and signed billing events.</li>
+                <li><strong>Google Gemini:</strong> generation of grounded briefing text from selected article and source material.</li>
+                <li><strong>Microsoft Azure AI Speech:</strong> conversion of the generated script into Burmese audio.</li>
+                <li><strong>Railway:</strong> hosting and operational logs for the Nay Thit API.</li>
+                <li><strong>Vercel:</strong> hosting and ordinary request logs for this landing website.</li>
+              </ul>
               <p>
-                Nay Thit uses or is integrating external technology providers
-                for particular functions. These may include Supabase
-                (authentication, database and storage), Google Sign-In, Google
-                AdMob (advertising), hosting providers and AI or text-to-speech
-                services supporting briefing generation. Providers may process
-                data in accordance with their own policies and service terms.
-              </p>
-              <p>
-                Before release, this section should list the production
-                providers actually in use, with their roles and any relevant
-                links to their privacy documentation.
+                Gemini receives selected article titles, descriptions, source
+                material and category context; the prompt is not designed to
+                include your account identifier. Azure receives the generated
+                narration text. Opening an original article sends a request to
+                that publisher under the publisher's own privacy terms.
               </p>
             </section>
             <section class="policy-section" id="ads">
               <h2>05 / Advertising and consent</h2>
               <p>
-                Nay Thit is preparing to use Google AdMob to display in-app
-                advertising. AdMob and its partners may process device
-                information, advertising identifiers and ad interaction data.
-                Where required, the app will present a consent or privacy
-                choices message and apply users' selections when requesting ads.
+                The Android app integrates Google UMP and AdMob. UMP checks at
+                app startup whether Google requires a consent form or privacy
+                options for the current user. The AdMob SDK is initialized only
+                after Google reports that ads may be requested and the build is
+                configured to show ads.
               </p>
               <p>
                 During development, Google test advertisements may appear. A
-                test advertisement is not a paid advertisement served to an end
-                user.
+                test advertisement is not monetized. Live production ad requests
+                remain disabled unless the production build explicitly enables
+                them and supplies a production banner ad-unit ID.
+              </p>
+              <p>
+                When Google requires it, a Privacy Choices control is available
+                in Settings so you can reopen Google's privacy-options form.
+                Device-level controls may also limit or reset advertising
+                identifiers. A consent choice does not prevent processing that a
+                provider is legally permitted to perform for security, fraud
+                prevention or basic service operation.
               </p>
               <p>
                 For more on Google's use of information, see
@@ -1365,26 +1417,27 @@
               <h2>06 / Your choices and rights</h2>
               <p>
                 You can manage available news preferences and profile fields
-                within the app. Depending on your location and applicable laws,
-                you may be able to request access to, correction of or deletion
-                of your personal information, and make choices about
-                advertising-related processing.
+                within the app, remove your profile image, manage notification
+                permission in Android settings and remove downloaded audio from
+                the app. Depending on your location and applicable laws, you may
+                also request access to, correction of or deletion of personal
+                information.
               </p>
               <p>
-                To request account or data deletion, contact
-                <a
-                  href="mailto:swa.developer.expert@gmail.com?subject=Nay%20Thit%20Data%20Deletion"
-                  >swa.developer.expert@gmail.com</a
-                >. Include the email address associated with your Nay Thit
-                account, but never send a password. Identity verification may be
-                required to protect your account.
+                To request account deletion in the app, open Settings, choose
+                Account and security, choose Delete account and enter the shown
+                confirmation. An accepted request immediately blocks further
+                account use and deactivates registered notification tokens. The
+                server then schedules removal of the authentication account,
+                account-linked database records, stored briefing audio and
+                private profile images. Processing may be asynchronous, but the
+                accepted deletion marker immediately blocks further account use.
               </p>
-              <div class="policy-callout">
-                Before publication: verify the exact in-app deletion process and
-                ensure this section accurately describes what data is deleted,
-                what may be retained and for how long. Google Play may require a
-                dedicated account-deletion web resource.
-              </div>
+              <p>
+                If you cannot access the app, contact
+                <a href="mailto:swa.developer.expert@gmail.com?subject=Nay%20Thit%20Data%20Request">swa.developer.expert@gmail.com</a>.
+                Never send a password. We may need to verify account ownership.
+              </p>
             </section>
             <section class="policy-section" id="security">
               <h2>07 / Retention and security</h2>
@@ -1392,22 +1445,39 @@
                 We apply access controls and other safeguards intended to
                 protect the information used by Nay Thit. No online service can
                 guarantee absolute security. We retain information for as long
-                as needed for relevant app functions, legitimate operational
-                purposes and applicable legal requirements; actual retention
-                periods differ depending on the category of data.
+                as needed to operate account features, preserve briefing history,
+                meet legitimate security and billing needs, and comply with
+                applicable legal requirements. Terminal generation and
+                notification records are designed for bounded cleanup; the
+                exact production retention schedule must be confirmed before
+                public release.
               </p>
               <p>
-                We will update this policy with more specific retention and
-                deletion periods before the app's public release.
+                The deletion workflow is designed to verify removal of private
+                briefing audio, private profile images and current
+                account-linked application records before it marks deletion as
+                complete. Operational billing-event records may be retained for
+                a bounded period after the account identifier is removed.
+                Provider security logs and backups may follow the provider's own
+                retention cycle and cannot always be removed from an existing
+                backup immediately.
+              </p>
+              <p>
+                Nay Thit and its service providers may process information in
+                countries other than the one where you live. Those locations
+                may have different data-protection rules. Contact us for
+                questions about providers, retention or an account-deletion
+                request.
               </p>
             </section>
             <section class="policy-section" id="children">
               <h2>08 / Children's privacy</h2>
               <p>
                 Nay Thit is a general-interest news product and is not designed
-                specifically for children. Age-related access rules and
-                advertising protections will be applied as required by
-                applicable law and distribution platform policies.
+                specifically for children. The current app does not include an
+                age-verification flow. It must not be listed as child-directed
+                or enabled for child-directed advertising without a separate
+                legal, store-policy and technical review.
               </p>
             </section>
             <section class="policy-section" id="contact">

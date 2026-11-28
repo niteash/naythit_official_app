@@ -37,7 +37,7 @@ This repository contains the **official coming-soon website**, not the Nay Thit 
 - **Responsive by design** — a fluid layout for phones, tablets, and desktops.
 - **Product storytelling** — an illustrated mobile-app concept, personalized news, listening, and sourcing highlights.
 - **Launch-ready placeholders** — clearly labeled App Store and Google Play buttons that are *not* presented as working downloads.
-- **Integrated privacy view** — a navigable privacy-policy draft with a direct `/privacy` URL for future AdMob and app-store disclosures.
+- **Integrated privacy view** — a navigable privacy policy with a direct `/privacy` URL for AdMob and app-store disclosures.
 - **Lightweight implementation** — plain HTML, CSS, and vanilla JavaScript, without a bundler or runtime framework.
 - **Small interactions** — smooth navigation and an animated **audio-player concept**; it is not real audio playback.
 
@@ -76,11 +76,13 @@ Open **http://localhost:8000/** to preview the homepage. A plain local server wi
 ```text
 naythit-website/
 ├── index.html             # Landing page + privacy view + styling + interactions
+├── app-ads.txt            # Verified AdMob authorized-seller declaration
+├── terms.html             # Terms route content
+├── support.html           # Support and web account-deletion resource
 ├── vercel.json            # Route /privacy to index.html
 ├── README.md              # Project documentation
-├── desktop-preview.png    # Desktop design reference
-├── mobile-preview.png     # Mobile design reference
-└── privacy-preview.png    # Privacy page design reference
+└── tests/
+    └── compliance.test.mjs # Privacy and Vercel routing checks
 ```
 
 > The preview PNGs are documentation assets, not required to run the website. For deployment, `index.html` and `vercel.json` are the two essential files.
@@ -94,6 +96,9 @@ naythit-website/
 
    - **Homepage:** https://naythitofficialapp.vercel.app/
    - **Privacy policy:** https://naythitofficialapp.vercel.app/privacy
+   - **Terms:** https://naythitofficialapp.vercel.app/terms
+   - **Support:** https://naythitofficialapp.vercel.app/support
+   - **Account deletion:** https://naythitofficialapp.vercel.app/delete-account
 
 The included configuration is:
 
@@ -109,13 +114,26 @@ The single HTML file uses the browser's pathname to render the appropriate view.
 
 ## Privacy and advertising readiness
 
-The privacy page is a **draft** and must be checked against the actual Nay Thit app before it is published as a final legal disclosure. In particular, verify:
+The privacy page was audited against the mobile and backend implementation on
+28 November 2026. It covers the currently implemented account, profile,
+personalization, notification, AI/TTS, purchase, UMP and AdMob flows.
 
-- Which account, profile, preference, device, and usage data are collected.
-- Which production providers process data, including authentication, hosting, AI/audio generation, and advertising providers.
-- How consent choices are displayed and respected where required.
-- How users request account and data deletion, what is deleted, and any retention periods.
-- Whether the app's age-related disclosures, privacy links, and store declarations accurately reflect its behavior.
+The audit still identified release decisions that must not be hidden by broad
+policy language:
+
+- Account-deletion hardening now verifies both private briefing audio and
+  `profile-images` cleanup, but the reviewed database migration and matching
+  backend must be deployed together before deletion requests are enabled.
+- The exact production retention schedule and worker operation must be confirmed
+  before the public release.
+- The app has no age-verification flow and must not be represented as
+  child-directed without a separate review.
+- The release owner supplied and verified the AdMob seller line. The root
+  `app-ads.txt` contains exactly:
+
+```text
+google.com, pub-1864447674722680, DIRECT, f08c47fec0942fa0
+```
 
 Once reviewed and publicly deployed, the `/privacy` URL can be entered in **AdMob → Privacy & messaging → Nay Thit → Add URL**. A visible website policy link alone does not replace the mobile app's required disclosures or consent flow.
 
@@ -125,15 +143,20 @@ Once reviewed and publicly deployed, the `/privacy` URL can be entered in **AdMo
 - [x] App concept preview and feature descriptions
 - [x] Privacy-policy route and footer link
 - [x] Vercel static rewrite configuration
-- [ ] Review and finalize the privacy policy
+- [x] Audit policy text against the current app implementation
 - [ ] Verify the deployed `/privacy` URL returns the correct page
+- [x] Add the owner-verified publisher ID to root `/app-ads.txt`
+- [x] Prepare public support, terms and account-deletion routes
+- [ ] Verify `/app-ads.txt` returns HTTP 200 as `text/plain`
+- [ ] Deploy and verify the reviewed profile-image deletion hardening
+- [ ] Confirm production retention configuration and operation
 - [ ] Add real App Store and Google Play links **when listings go live**
 - [ ] Verify production app disclosures, consent behavior, and deletion instructions
 - [ ] Update product imagery and wording to match the released mobile app
 
 ## Product status
 
-**Coming soon to Android and iOS.** This site is a preview of the product direction; displayed phone screens are illustrative, and store links are intentionally unavailable until launch. Availability and feature details may change during development.
+**Coming soon to Android.** This site is a preview of the product direction; displayed phone screens are illustrative, and the Google Play link remains intentionally unavailable until launch. No iOS release date has been announced.
 
 ## Contact
 
@@ -152,3 +175,18 @@ For product questions, feedback, or privacy requests:
 <sub>© 2026 Nay Thit. All rights reserved.</sub>
 
 </div>
+
+## Compliance checks
+
+Run the zero-dependency checks with:
+
+```bash
+node --test tests/*.test.mjs
+```
+
+After deployment, independently verify response status and content type:
+
+```bash
+curl -i https://naythitofficialapp.vercel.app/privacy
+curl -i https://naythitofficialapp.vercel.app/app-ads.txt
+```
