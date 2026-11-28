@@ -9,6 +9,7 @@ const index = readFileSync(join(root, 'index.html'), 'utf8');
 const terms = readFileSync(join(root, 'terms.html'), 'utf8');
 const support = readFileSync(join(root, 'support.html'), 'utf8');
 const vercel = JSON.parse(readFileSync(join(root, 'vercel.json'), 'utf8'));
+const publicHtml = [index, terms, support];
 
 test('Vercel serves the privacy view only from the explicit privacy rewrite', () => {
   assert.deepEqual(vercel.rewrites, [
@@ -50,6 +51,15 @@ test('privacy policy reflects the implemented data providers and controls', () =
     assert.ok(index.includes(disclosure), `Missing privacy disclosure: ${disclosure}`);
   }
   assert.doesNotMatch(index, /Before publication|must be reviewed against the app/i);
+});
+
+test('public pages contain no internal release drafting notes', () => {
+  for (const html of publicHtml) {
+    assert.doesNotMatch(
+      html,
+      /release owner|qualified counsel|before public launch|must be confirmed before public release/i,
+    );
+  }
 });
 
 test('app-ads uses the verified seller line and is served as root plain text', () => {
